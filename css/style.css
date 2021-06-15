@@ -1,42 +1,55 @@
 body {
     background-color: rgba(233, 213, 247, 0.5);
-    /* background-color: rgba(100, 76, 117, 0.5); */
 }
 
 main {
+    width: 999px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-content: space-around;
     align-items: center;
 }
 
+h1, h2 {
+    margin: 0  auto 0 0;
+}
+
 h1 {
+    color: #2f2f2f;
     font-size: 72px;
 }
-h3 {
-    font-size: 32px;
+h2 {
+    font-size: 18px;
+    color:rgb(58, 58, 58);
+    /* font-variant: small-caps; */
+    margin-bottom: 150px;
 }
 
 textarea {
     background-color: rgba(233, 213, 247, 0.041);
     margin: 10px;
-    width: 1003px;
+    width: 999px;
     height: 100px;
     font-size: 18px;
+    border-color: rgba(129, 111, 207, 0.705);
 }
 
 .keyboard {
-    background-color: rgb(58, 58, 58);
     padding: 5px;
     width: 999px;
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 4px;
-    color:rgba(209, 209, 209, 0.5);
     font-size: 18px;
     font-weight: bold;
+    color:rgba(209, 209, 209, 0.5);
+    background-color: rgb(58, 58, 58);
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(129, 111, 207, 0.705);
 }
 .keyboard_row {
     height: 55px;
@@ -46,15 +59,11 @@ textarea {
 }
 
 .keyboard_row > * {
-    /* margin: 3px; */
     position: relative;
     width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
-    /* vertical-align: middle;
-    line-height: 55px; */
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.418);
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.61);
@@ -63,7 +72,6 @@ textarea {
 .keyboard__key:hover {
     cursor: pointer;
 }
-
 
 .sub {
     position: absolute;
@@ -91,7 +99,6 @@ textarea {
 
 .active {
     background-color: rgba(129, 111, 207, 0.705);
-    /* background-color: rgba(127, 106, 143, 0.904); */
 }
 
 .caps-lock-on {
