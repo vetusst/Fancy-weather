@@ -39,5 +39,6 @@ export default function create(elem, classNames, children, parent, ...dataAttr) 
       }
     });
   }
+
   return element;
 }

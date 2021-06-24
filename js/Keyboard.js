@@ -21,6 +21,7 @@ export default class Keyboard {
       ['placeholder', 'start typing...'], ['rows', 5], ['cols', 50], ['autocorrect', 'off'], ['spellcheck', false]);
     this.keyboard = create('div', 'keyboard', null, main, ['language', langCode]);
     document.body.prepend(main);
+
     return this;
   }
 
@@ -115,6 +116,7 @@ export default class Keyboard {
         newButton.sub.innerHTML = '';
       }
       newButton.letter.innerHTML = keyObj.lower;
+
       return newButton;
     });
   }
@@ -153,6 +155,7 @@ export default class Keyboard {
         newButton.sub.innerHTML = '';
       }
       newButton.letter.innerHTML = this.isCaps ? keyObj.lower : keyObj.upper;
+
       return newButton;
     });
   }
