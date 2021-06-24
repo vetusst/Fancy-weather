@@ -109,7 +109,7 @@ export default class Keyboard {
       newButton.lower = keyObj.lower;
       newButton.upper = keyObj.upper;
 
-      if (keyObj.upper && keyObj.upper.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/)) {
+      if (keyObj.upper?.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/)) {
         newButton.sub.innerHTML = keyObj.upper;
       } else {
         newButton.sub.innerHTML = '';
@@ -126,7 +126,7 @@ export default class Keyboard {
 
       const newButton = button;
 
-      if (keyObj.upper && keyObj.upper.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/)) {
+      if (keyObj?.upper.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/)) {
         if (!this.isCaps) newButton.sub.innerHTML = this.isShift ? keyObj.lower : keyObj.upper;
         else newButton.sub.innerHTML = this.isShift ? keyObj.upper : keyObj.lower;
       } else {
@@ -147,7 +147,7 @@ export default class Keyboard {
 
       const newButton = button;
 
-      if (keyObj.upper && keyObj.upper.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/)) {
+      if (keyObj.upper?.match(/[^a-zA-Zа-яА-ЯёЁ0-9]/)) {
         newButton.sub.innerHTML = !this.isCaps ? keyObj.upper : keyObj.lower;
       } else {
         newButton.sub.innerHTML = '';

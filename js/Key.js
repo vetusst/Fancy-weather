@@ -8,7 +8,7 @@ export default class Key {
     this.code = code;
     this.isFnKey = Boolean(code.match(/Backspace|Tab|CapsLock|Enter|ShiftLeft|ShiftRight|ControlLeft|MetaLeft|AltLeft|AltRight|ContextMenu|ControlRight|Space/));
 
-    if (upper && upper.match(/[^a-zA-Zа-яёЁА-Я0-9]/)) {
+    if (upper?.match(/[^a-zA-Zа-яёЁА-Я0-9]/)) {
       this.sub = create('div', 'sub', this.upper);
     } else {
       this.sub = create('div', 'sub', '');
