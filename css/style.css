@@ -1,0 +1,115 @@
+:root {
+    --border-color: hsl(251, 50%, 62%, .5);
+}
+
+body {
+    background-color: hsl(275, 68%, 90%, .5);
+}
+
+main {
+    width: 999px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+
+h1, h2 {
+    margin: 0  auto 0 0;
+}
+
+h1 {
+    color: #2f2f2f;
+    font-size: 4.5em;
+}
+h2 {
+    font-size: 1.3em;
+    color:	hsl(0, 0%, 23%);
+    margin-bottom: 150px;
+}
+
+textarea {
+    background-color: hsl(275, 68%, 90%, .1);
+    margin: 10px;
+    width: 999px;
+    height: 100px;
+    font-size: 18px;
+    border-color: var(--border-color);
+}
+
+.keyboard {
+    padding: 5px;
+    width: 999px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color:	hsl(0, 0%, 82%, 0.5);
+    background-color: hsl(0, 0%, 23%);
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--border-color);
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.keyboard_row {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keyboard_row > * {
+    position: relative;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 0%, 0.4);
+    box-shadow: 1px 1px 2px 1px hsl(0, 0%, 0%, 0.6);
+}
+
+.keyboard__key:hover {
+    cursor: pointer;
+}
+
+.sub {
+    position: absolute;
+    top: 2%;
+    left: 10%;
+}
+[data-code='Backslash'] {
+    width: 80px;
+}
+[data-code='Tab'] {
+    width: 100px;
+}
+[data-code='Backspace'], [data-code='CapsLock'], [data-code='ControlRight'], [data-code='ControlLeft'] {
+    width: 120px;
+}
+[data-code='Enter'] {
+    width: 140px;
+}
+[data-code='ShiftLeft'], [data-code='ShiftRight'], [data-code='ControlRight'], [data-code='ControlLeft']  {
+    width: 160px;
+}
+[data-code='Space'] {
+    width: 395px;
+}
+
+.active {
+    background-color: var(--border-color);
+}
+
+.caps-lock-on {
+    color: red;
+}
