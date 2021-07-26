@@ -1,7 +1,7 @@
 {
-  "name": "vetusst-JSFEEN",
+  "name": "fancy-weather",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Weather app for RS School",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,19 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/rolling-scopes-school/vetusst-JSFEEN.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Daniil Melnikav",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/vetusst-JSFEEN/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/vetusst-JSFEEN#readme",
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.28.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4"
-  },
-  "dependencies": {},
-  "description": ""
+  "homepage": "https://github.com/rolling-scopes-school/vetusst-JSFEEN#readme"
 }
