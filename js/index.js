@@ -1,9 +1,9 @@
 import land from "./land.js"
 import autocomplete from './search.js'
 import { get, set } from './storage.js'
-WEATHER_KEY = process.env.WEATHER_KEY
 
 const main = window.addEventListener("load", () => {
+	const WEATHER_KEY = '301e1ec966ca4138bee153044211008'
 	const GEOCODING_KEY = '473e2c58admshd35861a36184ebap16013ejsn891921293317'
 	let long;
 	let lat;
