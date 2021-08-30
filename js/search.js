@@ -15,7 +15,7 @@ export default function autocomplete(inp) {
         a.style.backgroundColor = '#f1f1f1'
         inp.parentNode.appendChild(a);
 
-        const city = fetch(`http://autocomplete.travelpayouts.com/places2?term=${val}&locale=en&types[]=city`)
+        const city = fetch(`https://autocomplete.travelpayouts.com/places2?term=${val}&locale=en&types[]=city`)
         city.then(res => res.json()).then(res => {
             if (res.length < 1) {
                 console.log(res.length)
