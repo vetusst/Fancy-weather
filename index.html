@@ -12,6 +12,9 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/gh/joeymalvinni/webrtc-ip/dist/bundle.dev.js"></script>
     <script type="module" src="./js/index.js"></script>
+    <script>
+        fetch('/.netlify/functions/fetch-weather').then(response => console.log(response.json()))
+    </script>
 </head>
 <body>
     <main>
