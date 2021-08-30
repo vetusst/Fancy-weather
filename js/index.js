@@ -5,6 +5,7 @@ import { get, set } from './storage.js'
 const main = window.addEventListener("load", () => {
 	try {
 		const KEY = process.env.WEATHER_KEY
+		console.log(KEY)
 	} catch e {
 		console.log(e)
 	}
