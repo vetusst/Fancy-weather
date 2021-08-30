@@ -5,6 +5,7 @@ const handler = async (event) => {
   const city = 'Warsaw'
   const lang = 'en'
   const WEATHER_KEY = process.env.WEATHER_KEY
+  console.log(WEATHER_KEY, 'SUCESS!!!')
   try {
     let request = fetch(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${city}&lang=${lang}&days=3`)
     const data = await request
