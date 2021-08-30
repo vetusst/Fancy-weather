@@ -14,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/vetusst-JSFEEN/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/vetusst-JSFEEN#readme"
+  "homepage": "https://github.com/rolling-scopes-school/vetusst-JSFEEN#readme",
+  "dependencies": {}
 }
