@@ -30,7 +30,7 @@ const main = window.addEventListener("load", () => {
 		const lang = get('Language')
 		document.getElementById(lang).selected = 'selected'
 		document.getElementById('map__img').src = `https://maps.google.com/maps?q=${city}&t=&z=11&ie=UTF8&iwloc=&output=embed`
-		let request = fetch(`http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${city}&lang=${lang}&days=3`)
+		let request = fetch(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${city}&lang=${lang}&days=3`)
 		request
 			.then(response => {
 				return response.json();
