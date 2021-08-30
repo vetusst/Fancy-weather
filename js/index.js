@@ -3,14 +3,8 @@ import autocomplete from './search.js'
 import { get, set } from './storage.js'
 
 const main = window.addEventListener("load", () => {
-	try {
-		const KEY = process.env.WEATHER_KEY
-		console.log(KEY)
-	} catch (e) {
-		console.log(e)
-	}
-	const WEATHER_KEY = '301e1ec966ca4138bee153044211008'
-	const GEOCODING_KEY = '473e2c58admshd35861a36184ebap16013ejsn891921293317'
+	// const WEATHER_KEY = '301e1ec966ca4138bee153044211008'
+	// const GEOCODING_KEY = '473e2c58admshd35861a36184ebap16013ejsn891921293317'
 	let long;
 	let lat;
 	const searchBar = document.getElementsByTagName('form')
@@ -36,7 +30,7 @@ const main = window.addEventListener("load", () => {
 		const lang = get('Language')
 		document.getElementById(lang).selected = 'selected'
 		document.getElementById('map__img').src = `https://maps.google.com/maps?q=${city}&t=&z=11&ie=UTF8&iwloc=&output=embed`
-		let request = fetch(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${city}&lang=${lang}&days=3`)
+		let request = fetch(`/.netlify/functions/fetch-weather?city=${city}&${lang}`)
 		request
 			.then(response => {
 				return response.json();
