@@ -3,6 +3,11 @@ import autocomplete from './search.js'
 import { get, set } from './storage.js'
 
 const main = window.addEventListener("load", () => {
+	try {
+		const KEY = process.env.WEATHER_KEY
+	} catch e {
+		console.log(e)
+	}
 	const WEATHER_KEY = '301e1ec966ca4138bee153044211008'
 	const GEOCODING_KEY = '473e2c58admshd35861a36184ebap16013ejsn891921293317'
 	let long;
