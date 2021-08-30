@@ -6,7 +6,7 @@ const main = window.addEventListener("load", () => {
 	try {
 		const KEY = process.env.WEATHER_KEY
 		console.log(KEY)
-	} catch e {
+	} catch (e) {
 		console.log(e)
 	}
 	const WEATHER_KEY = '301e1ec966ca4138bee153044211008'
