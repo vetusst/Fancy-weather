@@ -3,8 +3,6 @@ const fetch = require("node-fetch")
 
 const handler = async (event) => {
   const { city, lang } = event.queryStringParameters
-  // const city = 'Warsaw'
-  // const lang = 'en'
   const WEATHER_KEY = process.env.WEATHER_KEY
   try {
     const request = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${city}&lang=${lang}&days=3`)
