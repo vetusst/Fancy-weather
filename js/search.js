@@ -18,12 +18,12 @@ export default function autocomplete(inp) {
         const city = fetch(`https://autocomplete.travelpayouts.com/places2?term=${val}&locale=en&types[]=city`)
         city.then(res => res.json()).then(res => {
             if (res.length < 1) {
-                console.log(res.length)
                 throw "No cities matched"
             }
             const dataset = res;
-            console.log(res)
+
             for (let i = 0; i < 10; i++) {
+                if (!dataset[i]) return
                 const city = dataset[i].name
                 const {lat, lon} = dataset[i].coordinates
                 if (city.substr(0, val.length).toUpperCase() === val.toUpperCase()) {
