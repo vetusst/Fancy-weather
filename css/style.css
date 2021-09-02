@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 body {
@@ -109,6 +108,7 @@ main {
 .topbar__search form {
   display: flex;
   position: relative;
+  overflow: visible;
 }
 .topbar__search input[type="text"] {
   height: 50px;
@@ -119,6 +119,7 @@ main {
   padding-left: 15px;
   border-radius: 5px 0 0 5px;
   background: #4c5255a2;
+  color: whitesmoke;
 }
 .topbar__search input[type="text"]:focus {
   outline: none;
