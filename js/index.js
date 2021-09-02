@@ -39,6 +39,10 @@ searchBar[0].addEventListener('submit', e => {
 	const { lat, lon } = searchBar[0][0].dataset
 	const city = searchBar[0][0].value
 	getWeather({ city: city, lat: lat, long: lon }).then(res => {
+		if (res.weatherData.hasOwnProperty('error')){
+			alert(res.weatherData.error.message)
+			return
+		}
 		const lang = get('Language')
 		render(res.weatherData, res.coords, lang)
 	})
